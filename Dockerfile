@@ -11,9 +11,6 @@ RUN yum install -y \
   ca-certificates \
   && yum clean all
 
-# Add mod_auth_mellon setup script
-ADD mellon_create_metadata.sh /usr/sbin/mellon_create_metadata.sh
-
 EXPOSE 3063
 
 ADD configure /usr/sbin/configure
