@@ -96,7 +96,7 @@ done
 export REQUEST_HEADERS
 
 # configure Apache proxy and auth
-cat /etc/httpd/conf.d/proxy.conf.template | envsubst '$SCHEMA,$HOST,$BACKEND,$MELLON_PATH,$REQUEST_HEADERS' > /etc/httpd/conf.d/proxy.conf
+cat /etc/httpd/conf.d/proxy.conf.template | envsubst '$SCHEMA,$HOST,$BACKEND,$MELLON_PATH,$REQUEST_HEADERS,$CUSTOM_CONFIG,$LISTEN_PORT' > /etc/httpd/conf.d/proxy.conf
 
 # Start apache
 httpd -DFOREGROUND
